@@ -1,0 +1,27 @@
+{
+  "name": "datasets-fi-postalcodes",
+  "version": "1.0.0",
+  "description": "Suomalaiset postinumerot, finnish postalcodes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theikkila/postinumerot.git"
+  },
+  "keywords": [
+    "Finnish",
+    "zip-code",
+    "postalcode",
+    "postal",
+    "code",
+    "finland"
+  ],
+  "author": "Teemu Heikkilä <teemu.heikkila@pistoke.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theikkila/postinumerot/issues"
+  },
+  "homepage": "https://github.com/theikkila/postinumerot#readme"
+}
