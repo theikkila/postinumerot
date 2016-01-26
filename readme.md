@@ -3,6 +3,7 @@
 Datat rouhitaan *fetch.py* skriptillä Postin tietokannasta.
 http://www.posti.fi/yritysasiakkaat/laheta/postinumeropalvelut/postinumerotiedostot.html
 
+
 ## Tiedostot
 
 `postcode_map_light.json` *92K* postinumero -> nimi (joko suomalainen tai ruotsalainen riippuen kunnan kielisyyssuhteesta)   
@@ -10,6 +11,11 @@ http://www.posti.fi/yritysasiakkaat/laheta/postinumeropalvelut/postinumerotiedos
 `postcodes.json` *1,7M* lista tietueista json-muodossa
 
 **Huom! Gzipattuina koko pienenee vielä entisestään.**
+
+
+## Ajantasaisuus
+
+Viimeisin päivitys `LAST_UPDATED`-tiedostossa
 
 ## Postinumeroiden päivitys
 ```
