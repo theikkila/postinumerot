@@ -22,6 +22,18 @@ Viimeisin päivitys `LAST_UPDATED`-tiedostossa
 python fetch.py
 ```
 
+## Esimerkki
+
+```
+npm install https://github.com/theikkila/postinumerot.git
+```
+
+```
+var postinumerot = require('datasets-fi-postalcodes');
+console.log(postinumerot['00100'])
+```
+
+
 ## Käyttöehdot
 
 Data on postin ja sitä koskee kaikki http://www.posti.fi/liitteet-yrityksille/ehdot/postinumeropalvelut-palvelukuvaus-ja-kayttoehdot.pdf dokumentin käyttöehdot.
