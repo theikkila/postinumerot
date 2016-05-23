@@ -17,8 +17,9 @@ files = []
 # Fetching filelist and finding the latest records
 print("Fetching records...")
 ftp.retrlines('NLST', lambda fn: files.append(fn))
-postcodes_filename = str(next(filter(lambda file: 'PCF' in file, files)))
 
+files_iter = iter(files)
+postcodes_filename = next(file_name for file_name in files_iter if file_name.startswith("PCF"))
 
 # Retrieving the file
 postcode_raw_data = BytesIO()
