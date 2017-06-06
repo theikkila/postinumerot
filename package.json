@@ -4,7 +4,7 @@
   "description": "Suomalaiset postinumerot, finnish postalcodes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./fetch_and_update.sh"
   },
   "repository": {
     "type": "git",
