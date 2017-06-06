@@ -1,32 +1,22 @@
-from ftplib import FTP
 
-from io import BytesIO
+try:
+    from urllib.request import urlopen
+except ImportError:
+    from urllib import urlopen
+
 import re, datetime, json
 
 # http://www.posti.fi/liitteet-yrityksille/ehdot/postinumeropalvelut-palvelukuvaus-ja-kayttoehdot.pdf
 
-itella_server = "ftp2.itella.com"
-folder = "/unzip/"
 
+# Fetch contents of the directory index
+index = urlopen("http://www.posti.fi/webpcode/unzip/").read().decode('utf-8')
 
-ftp = FTP(itella_server)
-ftp.login("postcode", "postcode")
-ftp.cwd(folder)
-files = []
-
-# Fetching filelist and finding the latest records
-print("Fetching records...")
-ftp.retrlines('NLST', lambda fn: files.append(fn))
-
-files_iter = iter(files)
-postcodes_filename = next(file_name for file_name in files_iter if file_name.startswith("PCF"))
+# Find the current file
+postcodes_filename = re.findall(r'http://www.posti.fi/webpcode/unzip/PCF_[0-9]*?\.dat', index)[0]
 
 # Retrieving the file
-postcode_raw_data = BytesIO()
-ftp.retrbinary('RETR ' + postcodes_filename, postcode_raw_data.write)
-ftp.quit()
-postcode_raw_data.seek(0)
-postcode_records = postcode_raw_data.read().decode('latin-1').split('\n')
+postcode_records = urlopen(postcodes_filename).read().decode('latin-1').split('\n')
 print("Fetched!")
 # Different structures
 postcode_list = []
