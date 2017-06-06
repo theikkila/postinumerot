@@ -2,6 +2,9 @@ general:
   branches:
     ignore:
       - master
+dependencies:
+  pre:
+    - echo -e "$NPM_USER\n$NPM_PASS\n$NPM_EMAIL" | npm login
 deployment:
   production:
     branch: master
