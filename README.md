@@ -6,9 +6,10 @@ http://www.posti.fi/yritysasiakkaat/laheta/postinumeropalvelut/postinumerotiedos
 
 ## Tiedostot
 
-`postcode_map_light.json` *92K* postinumero -> nimi (joko suomalainen tai ruotsalainen riippuen kunnan kielisyyssuhteesta)   
-`postcode_map.json` *1,7M* postinumero -> tietue (kaikki data postin tiedostosta json-muodossa)   
-`postcodes.json` *1,7M* lista tietueista json-muodossa
+`postcode_map_light.json` *~92K* postinumero -> nimi (joko suomalainen tai ruotsalainen riippuen kunnan kielisyyssuhteesta)   
+`postcode_map.json` *~1,7M* postinumero -> tietue (kaikki data postin tiedostosta json-muodossa)   
+`postcodes.json` *~1,7M* lista tietueista json-muodossa   
+
 
 **Huom! Gzipattuina koko pienenee vielä entisestään.**
 
@@ -16,20 +17,22 @@ http://www.posti.fi/yritysasiakkaat/laheta/postinumeropalvelut/postinumerotiedos
 ## Ajantasaisuus
 
 Viimeisin päivitys `LAST_UPDATED`-tiedostossa
+Uusi versio buildataan joka päivä klo 12:00 jos muutoksia ilmenee buildi julkaistaan uutena patchinä NPM:ään ja committina gittiin.
 
 ## Postinumeroiden päivitys
 ```
-python fetch.py
+./fetch_and_update.sh
 ```
 
 ## Esimerkki
 
 ```
-npm install https://github.com/theikkila/postinumerot.git
+npm install datasets-fi-postalcodes
+
 ```
 
 ```
-var postinumerot = require('datasets-fi-postalcodes');
+const postinumerot = require('datasets-fi-postalcodes');
 console.log(postinumerot['00100'])
 ```
 
