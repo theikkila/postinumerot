@@ -1,6 +1,6 @@
 {
   "name": "datasets-fi-postalcodes",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Suomalaiset postinumerot, finnish postalcodes",
   "main": "index.js",
   "scripts": {
