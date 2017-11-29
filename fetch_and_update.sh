@@ -1,6 +1,6 @@
-POSTCODE_HASH=`cat postcode_map_light.json postcode_map.json postcodes.json | md5sum`
+POSTCODE_HASH=`python hash.py`
 python fetch.py
-NEW_POSTCODE_HASH=`cat postcode_map_light.json postcode_map.json postcodes.json | md5sum`
+NEW_POSTCODE_HASH=`python hash.py`
 
 if [ "$POSTCODE_HASH" != "$NEW_POSTCODE_HASH" ]; then
   echo "Postcodes updated! Tests passed!"
