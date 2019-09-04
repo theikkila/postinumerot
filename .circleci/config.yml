@@ -5,6 +5,6 @@
        - image: circleci/node:latest
      steps:
        - checkout
-       - run: echo -e "$NPM_USER\n$NPM_PASS\n$NPM_EMAIL" | npm login
+       - run: echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc
        - run: npm test
        - run: ./deploy.sh
