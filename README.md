@@ -1,7 +1,7 @@
 # Suomalaiset postinumerot
 
 Datat rouhitaan *fetch.py* skriptillä Postin tietokannasta.
-http://www.posti.fi/yritysasiakkaat/laheta/postinumeropalvelut/postinumerotiedostot.html
+https://www.posti.fi/fi/asiakastuki/postinumerotiedostot
 
 
 ## Tiedostot
@@ -39,6 +39,6 @@ console.log(postinumerot['00100'])
 
 ## Käyttöehdot
 
-Data on postin ja sitä koskee kaikki http://www.posti.fi/liitteet-yrityksille/ehdot/postinumeropalvelut-palvelukuvaus-ja-kayttoehdot.pdf dokumentin käyttöehdot.
+Data on postin ja sitä koskee kaikki alkuperäisen https://www.posti.fi/fi/asiakastuki/postinumerotiedostot dokumentin käyttöehdot.
 
 JSON-muunnokset ovat vapaasti käytettävissä ja muunneltavissa.
