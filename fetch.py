@@ -10,10 +10,10 @@ import re, datetime, json
 
 
 # Fetch contents of the directory index
-index = urlopen("http://www.posti.fi/webpcode/unzip/").read().decode('utf-8')
+index = urlopen("https://www.posti.fi/webpcode/unzip/").read().decode('utf-8')
 
 # Find the current file
-postcodes_filename = re.findall(r'http://www.posti.fi/webpcode/unzip/PCF_[0-9]*?\.dat', index)[0]
+postcodes_filename = re.findall(r'https://www.posti.fi/webpcode/unzip/PCF_[0-9]*?\.dat', index)[0]
 
 # Retrieving the file
 postcode_records = urlopen(postcodes_filename).read().decode('latin-1').split('\n')
