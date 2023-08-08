@@ -1,6 +1,6 @@
-POSTCODE_HASH=`python hash.py`
-python fetch.py
-NEW_POSTCODE_HASH=`python hash.py`
+POSTCODE_HASH=`python3 hash.py`
+python3 fetch.py
+NEW_POSTCODE_HASH=`python3 hash.py`
 
 if [ "$POSTCODE_HASH" != "$NEW_POSTCODE_HASH" ]; then
   echo "Postcodes updated! Tests passed!"
