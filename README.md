@@ -3,6 +3,7 @@
 Datat rouhitaan *fetch.py* skriptillä Postin tietokannasta.
 https://www.posti.fi/fi/asiakastuki/postinumerotiedostot
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/theikkila/postinumerot/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/theikkila/postinumerot/tree/master)
 
 ## Tiedostot
 
@@ -17,7 +18,9 @@ https://www.posti.fi/fi/asiakastuki/postinumerotiedostot
 ## Ajantasaisuus
 
 Viimeisin päivitys `LAST_UPDATED`-tiedostossa
-Uusi versio buildataan joka päivä klo 12:00 jos muutoksia ilmenee buildi julkaistaan uutena patchinä NPM:ään ja committina gittiin.
+Uusi versio buildataan joka päivä klo 8:00 UTC jos muutoksia ilmenee buildi julkaistaan uutena patchinä NPM:ään ja committina gittiin.
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/theikkila/postinumerot/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/theikkila/postinumerot/tree/master)
 
 ## Postinumeroiden päivitys
 ```
