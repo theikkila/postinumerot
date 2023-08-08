@@ -3,8 +3,6 @@
 Datat rouhitaan *fetch.py* skriptillä Postin tietokannasta.
 https://www.posti.fi/fi/asiakastuki/postinumerotiedostot
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/theikkila/postinumerot/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/theikkila/postinumerot/tree/master)
-
 ## Tiedostot
 
 `postcode_map_light.json` *~92K* postinumero -> nimi (joko suomalainen tai ruotsalainen riippuen kunnan kielisyyssuhteesta)   
@@ -20,7 +18,7 @@ https://www.posti.fi/fi/asiakastuki/postinumerotiedostot
 Viimeisin päivitys `LAST_UPDATED`-tiedostossa
 Uusi versio buildataan joka päivä klo 8:00 UTC jos muutoksia ilmenee buildi julkaistaan uutena patchinä NPM:ään ja committina gittiin.
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/theikkila/postinumerot/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/theikkila/postinumerot/tree/master)
+Build tehdään CircleCI:n avulla. Buildin yhteydessä ajettava testi menee hyväksyttävästi läpi jos muutoksia edelliseen on. ns. rikki oleva buildi ei siis ole merkki siitä onko paketti ajantasalla. (kts edellinen: [![CircleCI](https://dl.circleci.com/status-badge/img/gh/theikkila/postinumerot/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/theikkila/postinumerot/tree/master))
 
 ## Postinumeroiden päivitys
 ```
